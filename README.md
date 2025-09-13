@@ -1,46 +1,134 @@
-# Getting Started with Create React App
+🏦 سیستم مدیریت هاب باشگاه مشتریان
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+این پروژه یک پنل مدیریتی با React هست که به بانک و باشگاه مشتریان کمک می‌کنه دیتاهای مربوط به مشتری‌ها (مثل تراکنش، تسهیلات، افتتاح حساب و ...) رو جمع‌آوری و پردازش کنه و خروجی رو به صورت امتیاز یا رویداد برای باشگاه مشتریان ارسال کنه.
 
-## Available Scripts
+📋 قابلیت‌ها
+معیارهای امتیازدهی (Score Metrics)
 
-In the project directory, you can run:
+نمایش لیست معیارها با صفحه‌بندی
 
-### `npm start`
+افزودن معیار جدید با فرم و اعتبارسنجی
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ویرایش و حذف معیارها (با تأیید)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+نمایش تاریخ ایجاد به شمسی
 
-### `npm test`
+امکان جستجو و مرتب‌سازی
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+امتیاز مشتریان (Customer Scores)
 
-### `npm run build`
+جدول امتیازات مشتری‌ها
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+جستجو بر اساس شناسه مشتری
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+فیلتر بر اساس معیار
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+مرتب‌سازی بر اساس تاریخ
 
-### `npm run eject`
+نمایش وضعیت ارسال امتیاز
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+صفحه‌بندی
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+گزارش پردازش‌ها (Job Logs)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+تاریخچه اجرای Jobها
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+فیلتر بر اساس وضعیت اجرا
 
-## Learn More
+نمایش جزئیات در Modal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+نمایش مدت زمان اجرا و خطاها
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+آمار کلی Jobها
+
+داشبورد
+
+نمایش آمار کلی سیستم
+
+کارت‌های اطلاعاتی و دسترسی سریع
+
+طراحی Responsive
+
+🛠️ تکنولوژی‌ها
+
+React 18 + TypeScript
+
+Material-UI v5
+
+React Router v6
+
+Context API + useReducer
+
+Moment Jalaali برای تاریخ شمسی
+
+CRACO برای تنظیمات Webpack
+
+تست‌ها با Jest و React Testing Library
+
+🚀 شروع کار
+پیش‌نیازها
+
+Node.js نسخه 16+
+
+npm یا yarn
+
+نصب و اجرا
+git clone <repository-url>
+cd tannaz
+npm install
+npm start
+
+
+پروژه روی http://localhost:3000
+ بالا میاد.
+
+Build نهایی
+npm run build
+
+
+
+📁 ساختار کلی پروژه
+src/
+├── components/      # کامپوننت‌های اصلی
+│   ├── Layout/      # Layout و Sidebar
+│   ├── ScoreMetrics/
+│   ├── CustomerScores/
+│   ├── JobLogs/
+│   └── common/
+├── pages/           # صفحات اصلی (Dashboard, Scores, Logs, ...)
+├── contexts/        # مدیریت state با Context
+├── types/           # Typeهای مشترک
+├── utils/           # توابع کمکی (مثل تاریخ)
+├── App.tsx
+├── index.tsx
+└── index.css
+
+📊 ویژگی‌های مهم
+
+پشتیبانی کامل از RTL (فونت فارسی + راست‌چین)
+
+صفحه‌بندی هوشمند
+
+تاریخ شمسی (کامل و کوتاه)
+
+طراحی Responsive (موبایل تا دسکتاپ)
+
+مدیریت state با Context API و useReducer
+
+
+
+
+
+🔧 نکات توسعه
+
+کامپوننت‌ها قابل استفاده مجدد طراحی شدن
+
+TypeScript برای همه بخش‌ها استفاده شده
+
+مدیریت استایل با theme مشترک
+
+Error handling پیاده‌سازی شده
+
+ساختار پروژه بر اساس featureهاست
+
+Lazy loading برای بخش‌های سنگین
